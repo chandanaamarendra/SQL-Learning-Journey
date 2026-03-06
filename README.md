@@ -78,5 +78,6 @@ My goal is to master SQL for data analytics and apply these skills to real-world
 ## 👩‍💻 Author
 
 Chandana
+
 Aspiring Data Analyst
 
