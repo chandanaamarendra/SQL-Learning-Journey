@@ -1,48 +1,48 @@
-# SQL Querying Practice — Core SQL Engine
+# 🗄️ SQL Querying Practice — Core SQL Engine
 
-This repository is part of my **SQL Learning Journey**, where I am systematically practicing SQL concepts from fundamentals to advanced querying.
+This repository is part of my **SQL Learning Journey**, where I am systematically practicing SQL concepts from **fundamentals to advanced querying**.
 
-In this project, I focused on **querying data using the SELECT statement family and SQL operators**, which form the core of data retrieval and analysis in relational databases.
+In this project, I focused on **querying data using the SELECT statement family and SQL operators**, which form the core of **data retrieval and analysis in relational databases**.
 
-These concepts are widely used by **Data Analysts, Data Scientists, and Backend Developers** when working with structured datasets.
+These concepts are widely used by **📊 Data Analysts, 🤖 Data Scientists, and 💻 Backend Developers** when working with structured datasets.
 
 ---
 
-# Project Objective
+# 🎯 Project Objective
 
 The main objective of this practice is to build a strong understanding of how to:
 
-- Retrieve data from relational tables
-- Filter and sort records
-- Handle duplicate values
-- Apply logical conditions
-- Perform pattern matching
-- Handle missing values
-- Implement pagination queries
+✔ Retrieve data from relational tables  
+✔ Filter and sort records  
+✔ Handle duplicate values  
+✔ Apply logical conditions  
+✔ Perform pattern matching  
+✔ Handle missing values  
+✔ Implement pagination queries  
 
 This project simulates a **small customer dataset** to demonstrate real-world SQL querying techniques.
 
 ---
 
-# Tools Used
+# 🛠️ Tools Used
 
-- SQL Server  
-- T-SQL  
-- GitHub (for version control and documentation)
+- 🗄️ SQL Server  
+- 📜 T-SQL  
+- 🌐 GitHub (Version Control & Documentation)
 
 ---
 
-# Database Used
+# 🗃️ Database Used
 
 ```sql
 USE SQL_Learning_Journey
 ```
 
-A table named **Customers_3** was created to simulate a simple customer dataset.
+A table named **Customers_3** was created to simulate a small customer dataset.
 
 ---
 
-# Table Structure
+# 🧱 Table Structure
 
 ```sql
 CREATE TABLE Customers_3(
@@ -55,7 +55,7 @@ Email varchar(100)
 );
 ```
 
-### Column Description
+### 📋 Column Description
 
 | Column | Description |
 |------|-------------|
@@ -64,13 +64,13 @@ Email varchar(100)
 | City | Customer location |
 | Age | Customer age |
 | Salary | Customer salary |
-| Email | Customer email address |
+| Email | Customer email |
 
-Some records intentionally contain **NULL email values** to practice missing data handling.
+Some records intentionally contain **NULL email values** to practice **missing data handling**.
 
 ---
 
-# Sample Data
+# 📊 Sample Data
 
 ```sql
 INSERT INTO Customers_3 VALUES
@@ -84,13 +84,13 @@ INSERT INTO Customers_3 VALUES
 (8,'Arjun','Chennai',31,52000,NULL);
 ```
 
-This dataset allows practice of filtering, sorting, and pattern matching queries.
+This dataset allows practice of **filtering, sorting, and pattern matching queries**.
 
 ---
 
-# SQL Concepts Practiced
+# 📚 SQL Concepts Practiced
 
-## SELECT
+## 🔹 SELECT
 
 The `SELECT` statement retrieves data from tables.
 
@@ -110,7 +110,7 @@ FROM Customers_3
 
 ---
 
-# DISTINCT
+# 🔹 DISTINCT
 
 `DISTINCT` removes duplicate values from query results.
 
@@ -123,9 +123,9 @@ FROM Customers_3
 
 ---
 
-# WHERE Clause
+# 🔹 WHERE Clause
 
-The `WHERE` clause filters records based on conditions.
+The `WHERE` clause filters rows based on conditions.
 
 Example: Customers from Bangalore.
 
@@ -145,11 +145,11 @@ WHERE Age > 30
 
 ---
 
-# ORDER BY
+# 🔹 ORDER BY
 
 `ORDER BY` sorts query results.
 
-Sort by age (ascending):
+Sort by age:
 
 ```sql
 SELECT *
@@ -157,7 +157,7 @@ FROM Customers_3
 ORDER BY Age
 ```
 
-Sort by salary (descending):
+Sort by salary (highest first):
 
 ```sql
 SELECT *
@@ -175,11 +175,11 @@ ORDER BY City, Age
 
 ---
 
-# TOP
+# 🔹 TOP
 
 Used to return a limited number of rows.
 
-Example: Retrieve first 3 rows.
+Retrieve first 3 rows:
 
 ```sql
 SELECT TOP 3 *
@@ -196,11 +196,9 @@ ORDER BY Salary DESC
 
 ---
 
-# OFFSET (Pagination)
+# 🔹 OFFSET (Pagination)
 
-OFFSET is commonly used in **pagination systems**.
-
-Example: Skip first 3 rows and retrieve next 3 rows.
+Used to skip rows and retrieve a specific range.
 
 ```sql
 SELECT *
@@ -210,16 +208,16 @@ OFFSET 3 ROWS
 FETCH NEXT 3 ROWS ONLY
 ```
 
+This technique is commonly used in **pagination systems in applications and dashboards**.
+
 ---
 
-# SQL Operators
+# ⚙️ SQL Operators
 
-## Comparison Operators
+## 🔸 Comparison Operators
 
-Used to compare values.
-
-| Operator | Description |
-|------|-------------|
+| Operator | Meaning |
+|------|------|
 | = | Equal |
 | > | Greater than |
 | < | Less than |
@@ -237,9 +235,7 @@ WHERE Salary > 40000
 
 ---
 
-# Logical Operators
-
-Logical operators combine conditions.
+# 🔸 Logical Operators
 
 ### AND
 
@@ -269,11 +265,9 @@ WHERE NOT City = 'Bangalore'
 
 ---
 
-# Special SQL Operators
+# 🔸 Special Operators
 
 ## BETWEEN
-
-Filters values within a range.
 
 ```sql
 SELECT *
@@ -285,8 +279,6 @@ WHERE Salary BETWEEN 40000 AND 55000
 
 ## IN
 
-Matches multiple values.
-
 ```sql
 SELECT *
 FROM Customers_3
@@ -297,9 +289,7 @@ WHERE City IN ('Delhi','Mumbai','Bangalore')
 
 ## LIKE
 
-Used for pattern matching.
-
-Names starting with **R**:
+Names starting with **R**
 
 ```sql
 SELECT *
@@ -307,7 +297,7 @@ FROM Customers_3
 WHERE Name LIKE 'R%'
 ```
 
-Names ending with **A**:
+Names ending with **A**
 
 ```sql
 SELECT *
@@ -315,7 +305,7 @@ FROM Customers_3
 WHERE Name LIKE '%A'
 ```
 
-Names containing **AM**:
+Names containing **AM**
 
 ```sql
 SELECT *
@@ -325,9 +315,7 @@ WHERE Name LIKE '%AM%'
 
 ---
 
-# Handling Missing Values
-
-To detect missing values we use `IS NULL`.
+# ⚠️ Handling Missing Values
 
 Find customers without email:
 
@@ -347,9 +335,9 @@ WHERE Email IS NOT NULL
 
 ---
 
-# Practice Queries
+# 🧠 Practice Queries
 
-### Customers from Bangalore sorted by salary
+### 🔹 Customers from Bangalore sorted by salary
 
 ```sql
 SELECT *
@@ -360,7 +348,7 @@ ORDER BY Salary DESC
 
 ---
 
-### Top 2 highest salaries
+### 🔹 Top 2 highest salaries
 
 ```sql
 SELECT TOP 2 *
@@ -370,7 +358,7 @@ ORDER BY Salary DESC
 
 ---
 
-### Customers aged between 25 and 30
+### 🔹 Customers aged between 25 and 30
 
 ```sql
 SELECT *
@@ -380,7 +368,7 @@ WHERE Age BETWEEN 25 AND 30
 
 ---
 
-### Customers whose name starts with A
+### 🔹 Customers whose name starts with A
 
 ```sql
 SELECT *
@@ -390,7 +378,7 @@ WHERE Name LIKE 'A%'
 
 ---
 
-### Customers with missing email
+### 🔹 Customers with missing email
 
 ```sql
 SELECT *
@@ -400,28 +388,43 @@ WHERE Email IS NULL
 
 ---
 
-# Key Learning Outcomes
+# 🎓 Key Learning Outcomes
 
-Through this SQL practice I developed the ability to:
+Through this SQL practice I learned how to:
 
-- Retrieve and filter data using SQL queries  
-- Remove duplicate values from datasets  
-- Sort and organize query results  
-- Apply comparison and logical operators  
-- Use pattern matching for text analysis  
-- Detect and handle missing data  
-- Implement pagination using OFFSET  
+✔ Retrieve and filter data using SQL queries  
+✔ Remove duplicate records using DISTINCT  
+✔ Sort results using ORDER BY  
+✔ Apply comparison and logical operators  
+✔ Perform pattern matching using LIKE  
+✔ Handle missing values using IS NULL  
+✔ Implement pagination using OFFSET  
 
-These concepts form the **foundation of SQL querying used in real-world data analysis**.
+These concepts form the **foundation of SQL querying used in real-world data analytics**.
 
 ---
 
+# 🚀 Future Improvements
 
+Next topics in this SQL learning journey:
 
-# Author
+- 📊 Aggregation Functions (COUNT, SUM, AVG, MIN, MAX)
+- 📦 GROUP BY and HAVING
+- 🔗 SQL JOINS
+- 🔍 Subqueries
+- 📈 Window Functions
+
+---
+
+# 👩‍💻 Author
 
 **Chandana**
 
 Aspiring **Data Scientist | Data Analyst**
 
-Currently building strong foundations in **SQL, Python, Statistics, and Machine Learning**.
+Currently building strong foundations in:
+
+- SQL
+- Python
+- Statistics
+- Machine Learning
